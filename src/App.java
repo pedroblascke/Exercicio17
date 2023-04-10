@@ -20,6 +20,7 @@ public class App {
 
         // 3°: Galões 3,6L = 25 reais
         double precoGalao = 25;
+        double volumeGalao = 3.6;
 
         // 4°: Calcular quantas latas de 18L
             // 1 -> 1 -> 6
@@ -30,13 +31,16 @@ public class App {
         double valorTotalLatas = quantidadeLatas * precoLata;
 
         // 6°: Calcular quantos galões de 3,6L
+        double quantidadeGaloes = metragem / (volumeGalao * rendimentoLitros);
+        double valorTotalGaloes = quantidadeGaloes * precoGalao;
+        
         // 7°: Calcular a melhor quantidade de latas e galões, considerando quantidades de latas/galões cheios e 10% de folga.
 
         //Saídas: apresentar os resultados dos cálculos.
         System.out.printf("A metragem a ser pintada é de %f metros quadrados", metragem);
         System.out.println("");
         System.out.printf("A quantidade de latas é %f e o valor total em latas é %f", quantidadeLatas, valorTotalLatas);
-
+        System.out.printf("A quantidade de galões é %f e o valor total em galões é %f", quantidadeGaloes, valorTotalGaloes);
 
     }
 }
