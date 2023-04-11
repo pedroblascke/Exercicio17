@@ -34,9 +34,15 @@ public class App {
         double quantidadeGaloes = metragem / (volumeGalao * rendimentoLitros);
         double valorTotalGaloes = quantidadeGaloes * precoGalao;
 
-        // 7°: Calcular a melhor quantidade de latas e galões, considerando quantidades de latas/galões cheios e 10% de folga.
-            //Quantidade a pintar para mistura
+        //Quantidade a pintar para mistura
         double metragemMistura = metragem * 1.1; //1,1 = 10%
+        double quantidadeLatasMistura = metragemMistura
+        double quantidadeLataMisturaArredondada = Math.ceil(metragemMistura / (volumeLataLitros * rendimentoLitros)); //Serve para arredondar o valor PARA CIMA.
+        double quantidadeaSerConvertidaEmGaloes = quantidadeLatasMisturaArredondada 
+
+        // 7°: Calcular a melhor quantidade de latas e galões, considerando quantidades de latas/galões cheios e 10% de folga.
+            
+        
 
         //Saídas: apresentar os resultados dos cálculos.
         System.out.printf("A metragem a ser pintada é de %f metros quadrados", metragem);
@@ -45,5 +51,7 @@ public class App {
         System.out.println("");
         System.out.printf("A quantidade de galões é %f e o valor total em galões é %f", quantidadeGaloes, valorTotalGaloes);
         System.out.printf("A metragem para mistura é igual a %f", metragemMistura);
-    }
+        System.out.printf("A quantidade de latas para mistura é igual a %f", quantidadeLataMisturaArredondada);
+        
+    }   
 }
